@@ -1,0 +1,25 @@
+package com.example;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+
+@EnableZuulProxy
+/*
+*   开启路由网关
+* */
+@EnableEurekaClient
+@EnableDiscoveryClient
+/*
+* 注册中心注测zuul
+* */
+@SpringBootApplication
+public class ServiceZuulApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(ServiceZuulApplication.class, args);
+    }
+
+}

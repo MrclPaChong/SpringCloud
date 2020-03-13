@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eurekaserver" />
+        <module name="service-zuul" />
+        <module name="service-ribbon" />
+        <module name="eurekaclient" />
+        <module name="service-feign" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="serice-feign" target="1.8" />
+      <module name="service-feign (1)" target="1.8" />
+      <module name="service-feign (2)" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eurekaclient" options="-parameters" />
+      <module name="eurekaserver" options="-parameters" />
+      <module name="serice-feign" options="-parameters" />
+      <module name="service-feign" options="-parameters" />
+      <module name="service-feign (1)" options="-parameters" />
+      <module name="service-feign (2)" options="-parameters" />
+      <module name="service-ribbon" options="-parameters" />
+      <module name="service-zuul" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,34 @@
+
+server:
+  port: 8769
+
+spring:
+  application:
+    name: service-zuul
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
+  host:
+    connect-timeout-millis: 3000
+    socket-timeout-millis: 3000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+
+#hhtp响应需超时会报错：Forwarding error
+#解决：
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000
+
+
